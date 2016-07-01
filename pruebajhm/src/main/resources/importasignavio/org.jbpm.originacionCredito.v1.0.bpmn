@@ -1,0 +1,965 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color" xmlns:drools="http://www.jboss.org/drools" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" xmlns:signavio="http://www.signavio.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" drools:packageName="org.jbpm" drools:version="1.0" exporter="Signavio Process Editor, http://www.signavio.com" exporterVersion="10.1.0" expressionLanguage="http://www.mvel.org/2.0" id="_aD0MIT4XEeahK6ElTAcGSQ" targetNamespace="http://www.omg.org/bpmn20" typeLanguage="http://www.java.com/javaTypes" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL http://www.omg.org/spec/BPMN/2.0/20100501/BPMN20.xsd">
+   <itemDefinition id="_clienteAceptaItem" isCollection="false" itemKind="Information" structureRef="String"/>
+   <itemDefinition id="_dictamenApruebaItem" isCollection="false" itemKind="Information" structureRef="String"/>
+   <itemDefinition id="_reconsideracionItem" isCollection="false" itemKind="Information" structureRef="String"/>
+   <itemDefinition id="_resolucionDictamenItem" isCollection="false" itemKind="Information" structureRef="com.vxmas.proceso.originacioncredito.resolucionDictamen"/>
+   <itemDefinition id="_montoCreditoItem" isCollection="false" itemKind="Information" structureRef="Integer"/>
+   <itemDefinition id="_plazoItem" isCollection="false" itemKind="Information" structureRef="String"/>
+   <itemDefinition id="_condicionesItem" isCollection="false" itemKind="Information" structureRef="String"/>
+   <itemDefinition id="_solicitudCapturaItem" isCollection="false" itemKind="Information" structureRef="com.vxmas.proceso.originacioncredito.solicitudCaptura"/>
+   <itemDefinition id="_correoDesdeItem" isCollection="false" itemKind="Information" structureRef="String"/>
+   <itemDefinition id="_correoHaciaItem" isCollection="false" itemKind="Information" structureRef="String"/>
+   <itemDefinition id="_correoAsuntoItem" isCollection="false" itemKind="Information" structureRef="String"/>
+   <itemDefinition id="_correoMensajeItem" isCollection="false" itemKind="Information" structureRef="String"/>
+   <itemDefinition id="_detallesDictamenItem" isCollection="false" itemKind="Information" structureRef="String"/>
+   <itemDefinition id="_documentosItem" isCollection="false" itemKind="Information" structureRef="org.jbpm.document.Document"/>
+   <itemDefinition id="__F89ACE36-66BC-49A9-A955-9F70A8A5DCE4_inSolicitudCapturaInputXItem" isCollection="false" itemKind="Information" structureRef="com.vxmas.proceso.originacioncredito.solicitudCaptura"/>
+   <itemDefinition id="__F89ACE36-66BC-49A9-A955-9F70A8A5DCE4_SkippableInputXItem" isCollection="false" itemKind="Information" structureRef="Object"/>
+   <itemDefinition id="__F89ACE36-66BC-49A9-A955-9F70A8A5DCE4_GroupIdInputXItem" isCollection="false" itemKind="Information" structureRef="Object"/>
+   <itemDefinition id="__F89ACE36-66BC-49A9-A955-9F70A8A5DCE4_outSolicitudCapturaOutputXItem" isCollection="false" itemKind="Information" structureRef="com.vxmas.proceso.originacioncredito.solicitudCaptura"/>
+   <itemDefinition id="__F89ACE36-66BC-49A9-A955-9F70A8A5DCE4_outDocumentosOutputXItem" isCollection="false" itemKind="Information" structureRef="org.jbpm.document.Document"/>
+   <itemDefinition id="__F7944FF9-913C-41D5-8ED6-6F831F824FB8_inSolicitudCapturaInputXItem" isCollection="false" itemKind="Information" structureRef="com.vxmas.proceso.originacioncredito.solicitudCaptura"/>
+   <itemDefinition id="__F7944FF9-913C-41D5-8ED6-6F831F824FB8_inResolucionDictamenInputXItem" isCollection="false" itemKind="Information" structureRef="com.vxmas.proceso.originacioncredito.resolucionDictamen"/>
+   <itemDefinition id="__F7944FF9-913C-41D5-8ED6-6F831F824FB8_inDocumentosInputXItem" isCollection="false" itemKind="Information" structureRef="org.jbpm.document.Document"/>
+   <itemDefinition id="__F7944FF9-913C-41D5-8ED6-6F831F824FB8_SkippableInputXItem" isCollection="false" itemKind="Information" structureRef="Object"/>
+   <itemDefinition id="__F7944FF9-913C-41D5-8ED6-6F831F824FB8_GroupIdInputXItem" isCollection="false" itemKind="Information" structureRef="Object"/>
+   <itemDefinition id="__F7944FF9-913C-41D5-8ED6-6F831F824FB8_outSolicitudCapturaOutputXItem" isCollection="false" itemKind="Information" structureRef="com.vxmas.proceso.originacioncredito.solicitudCaptura"/>
+   <itemDefinition id="__F7944FF9-913C-41D5-8ED6-6F831F824FB8_outResolucionDictamenOutputXItem" isCollection="false" itemKind="Information" structureRef="com.vxmas.proceso.originacioncredito.resolucionDictamen"/>
+   <itemDefinition id="__38C44B9F-0F9A-4CEE-8090-D865AC790921_inSolicitudCapturaInputXItem" isCollection="false" itemKind="Information" structureRef="com.vxmas.proceso.originacioncredito.solicitudCaptura"/>
+   <itemDefinition id="__38C44B9F-0F9A-4CEE-8090-D865AC790921_inResolucionDictamenInputXItem" isCollection="false" itemKind="Information" structureRef="com.vxmas.proceso.originacioncredito.resolucionDictamen"/>
+   <itemDefinition id="__38C44B9F-0F9A-4CEE-8090-D865AC790921_SkippableInputXItem" isCollection="false" itemKind="Information" structureRef="Object"/>
+   <itemDefinition id="__38C44B9F-0F9A-4CEE-8090-D865AC790921_GroupIdInputXItem" isCollection="false" itemKind="Information" structureRef="Object"/>
+   <itemDefinition id="__38C44B9F-0F9A-4CEE-8090-D865AC790921_outSolicitudCapturaOutputXItem" isCollection="false" itemKind="Information" structureRef="com.vxmas.proceso.originacioncredito.solicitudCaptura"/>
+   <itemDefinition id="__38C44B9F-0F9A-4CEE-8090-D865AC790921_outResolucionDictamenOutputXItem" isCollection="false" itemKind="Information" structureRef="com.vxmas.proceso.originacioncredito.resolucionDictamen"/>
+   <itemDefinition id="__7E897125-4679-475E-923C-596A17AF09AA_inSolicitudCapturaInputXItem" isCollection="false" itemKind="Information" structureRef="com.vxmas.proceso.originacioncredito.solicitudCaptura"/>
+   <itemDefinition id="__7E897125-4679-475E-923C-596A17AF09AA_inResolucionDictamenInputXItem" isCollection="false" itemKind="Information" structureRef="com.vxmas.proceso.originacioncredito.resolucionDictamen"/>
+   <itemDefinition id="__7E897125-4679-475E-923C-596A17AF09AA_SkippableInputXItem" isCollection="false" itemKind="Information" structureRef="Object"/>
+   <itemDefinition id="__7E897125-4679-475E-923C-596A17AF09AA_GroupIdInputXItem" isCollection="false" itemKind="Information" structureRef="Object"/>
+   <itemDefinition id="__7E897125-4679-475E-923C-596A17AF09AA_outSolicitudCapturaOutputXItem" isCollection="false" itemKind="Information" structureRef="com.vxmas.proceso.originacioncredito.solicitudCaptura"/>
+   <itemDefinition id="__7E897125-4679-475E-923C-596A17AF09AA_outResolucionDictamenOutputXItem" isCollection="false" itemKind="Information" structureRef="com.vxmas.proceso.originacioncredito.resolucionDictamen"/>
+   <itemDefinition id="__7E897125-4679-475E-923C-596A17AF09AA_outReconsideracionOutputXItem" isCollection="false" itemKind="Information" structureRef="String"/>
+   <itemDefinition id="__E521D1F1-D370-40D6-B996-3895F6B0A78C_SkippableInputXItem" isCollection="false" itemKind="Information" structureRef="Object"/>
+   <itemDefinition id="__E521D1F1-D370-40D6-B996-3895F6B0A78C_GroupIdInputXItem" isCollection="false" itemKind="Information" structureRef="Object"/>
+   <itemDefinition id="__232017C7-F3FE-455E-A21E-2CA712FABF52_inSolicitudCapturaInputXItem" isCollection="false" itemKind="Information" structureRef="com.vxmas.proceso.originacioncredito.solicitudCaptura"/>
+   <itemDefinition id="__232017C7-F3FE-455E-A21E-2CA712FABF52_inResolucionDictamenInputXItem" isCollection="false" itemKind="Information" structureRef="com.vxmas.proceso.originacioncredito.resolucionDictamen"/>
+   <itemDefinition id="__232017C7-F3FE-455E-A21E-2CA712FABF52_SkippableInputXItem" isCollection="false" itemKind="Information" structureRef="Object"/>
+   <itemDefinition id="__232017C7-F3FE-455E-A21E-2CA712FABF52_GroupIdInputXItem" isCollection="false" itemKind="Information" structureRef="Object"/>
+   <itemDefinition id="__232017C7-F3FE-455E-A21E-2CA712FABF52_outSolicitudCapturaOutputXItem" isCollection="false" itemKind="Information" structureRef="com.vxmas.proceso.originacioncredito.solicitudCaptura"/>
+   <itemDefinition id="__232017C7-F3FE-455E-A21E-2CA712FABF52_outResolucionDictamenOutputXItem" isCollection="false" itemKind="Information" structureRef="com.vxmas.proceso.originacioncredito.resolucionDictamen"/>
+   <itemDefinition id="__3953C50B-0EF2-4CC9-BD98-6AD2DC4E3265_inSolicitudCapturaInputXItem" isCollection="false" itemKind="Information" structureRef="com.vxmas.proceso.originacioncredito.solicitudCaptura"/>
+   <itemDefinition id="__3953C50B-0EF2-4CC9-BD98-6AD2DC4E3265_inResolucionDictamenInputXItem" isCollection="false" itemKind="Information" structureRef="com.vxmas.proceso.originacioncredito.resolucionDictamen"/>
+   <itemDefinition id="__3953C50B-0EF2-4CC9-BD98-6AD2DC4E3265_SkippableInputXItem" isCollection="false" itemKind="Information" structureRef="Object"/>
+   <itemDefinition id="__3953C50B-0EF2-4CC9-BD98-6AD2DC4E3265_GroupIdInputXItem" isCollection="false" itemKind="Information" structureRef="Object"/>
+   <itemDefinition id="__3953C50B-0EF2-4CC9-BD98-6AD2DC4E3265_outSolicitudCapturaOutputXItem" isCollection="false" itemKind="Information" structureRef="com.vxmas.proceso.originacioncredito.solicitudCaptura"/>
+   <itemDefinition id="__3953C50B-0EF2-4CC9-BD98-6AD2DC4E3265_outResolucionDictamenOutputXItem" isCollection="false" itemKind="Information" structureRef="com.vxmas.proceso.originacioncredito.resolucionDictamen"/>
+   <itemDefinition id="__D1295129-4F63-4BA8-82FF-4C0C4CE4712C_SkippableInputXItem" isCollection="false" itemKind="Information" structureRef="Object"/>
+   <itemDefinition id="__D1295129-4F63-4BA8-82FF-4C0C4CE4712C_GroupIdInputXItem" isCollection="false" itemKind="Information" structureRef="Object"/>
+   <collaboration id="sid-ad8c6f87-3467-4547-980b-930c125fefb2">
+      <extensionElements>
+         <signavio:signavioDiagramMetaData metaKey="revisionid" metaValue="bc55698cbb814424943625fbbda38133"/>
+      </extensionElements>
+      <participant id="originacionCredito.originacionCredito" name="originacionCredito" processRef="sid-f27d888a-232d-4191-96aa-b5cad79e685a">
+         <extensionElements/>
+      </participant>
+   </collaboration>
+   <process id="sid-f27d888a-232d-4191-96aa-b5cad79e685a" isClosed="false" isExecutable="false" name="originacionCredito" processType="None">
+      <extensionElements/>
+      <laneSet id="sid-a89bfb7e-a42a-4c1b-984a-77b74d1061d1">
+         <lane color:background-color="#ffffff" color:border-color="#000000" color:color="#000000" drools:selectable="true" id="_E3993D55-EE09-48F9-8354-01BDEA56F981" name="Ejecutivo de Venta ">
+            <extensionElements>
+               <drools:metaData name="elementname">
+                  <drools:metaValue>Ejecutivo de Venta
+</drools:metaValue>
+          </drools:metaData>
+            </extensionElements>
+            <flowNodeRef>processStartEvent</flowNodeRef>
+            <flowNodeRef>_F89ACE36-66BC-49A9-A955-9F70A8A5DCE4</flowNodeRef>
+            <flowNodeRef>_F7944FF9-913C-41D5-8ED6-6F831F824FB8</flowNodeRef>
+            <flowNodeRef>_38C44B9F-0F9A-4CEE-8090-D865AC790921</flowNodeRef>
+            <flowNodeRef>_7E897125-4679-475E-923C-596A17AF09AA</flowNodeRef>
+            <flowNodeRef>_1F1DAF3C-7E04-4126-A058-667E992504A0</flowNodeRef>
+            <flowNodeRef>_7A936D33-9D8B-407A-BCF5-5622AC7F54DC</flowNodeRef>
+         </lane>
+         <lane color:background-color="#ffffff" color:border-color="#000000" color:color="#000000" drools:selectable="true" id="_8D2FEE8F-8880-4D8D-9FAC-869A82016C21" name="Sistema de riesgo crediticio">
+            <extensionElements>
+               <drools:metaData name="elementname">
+                  <drools:metaValue>Sistema de riesgo crediticio</drools:metaValue>
+          </drools:metaData>
+            </extensionElements>
+            <flowNodeRef>_E521D1F1-D370-40D6-B996-3895F6B0A78C</flowNodeRef>
+            <flowNodeRef>_986E7B78-876B-42D0-9BCD-85A34D62BEC4</flowNodeRef>
+            <flowNodeRef>_90D4A08A-AF75-4978-A582-71C5A45E13ED</flowNodeRef>
+         </lane>
+         <lane color:background-color="#ffffff" color:border-color="#000000" color:color="#000000" drools:selectable="true" id="_7A8795B3-E6D7-4BD9-AA96-7F7EFD36F59C" name="Analista de credito">
+            <extensionElements>
+               <drools:metaData name="elementname">
+                  <drools:metaValue>Analista de credito</drools:metaValue>
+          </drools:metaData>
+            </extensionElements>
+            <flowNodeRef>_232017C7-F3FE-455E-A21E-2CA712FABF52</flowNodeRef>
+            <flowNodeRef>_611D9324-CA25-4212-A797-C17BFA9FBD7B</flowNodeRef>
+         </lane>
+         <lane color:background-color="#ffffff" color:border-color="#000000" color:color="#000000" drools:selectable="true" id="_96B81912-76D7-46FE-BD2E-74D9AA3AE995" name="Operaciones">
+            <extensionElements>
+               <drools:metaData name="elementname">
+                  <drools:metaValue>Operaciones</drools:metaValue>
+          </drools:metaData>
+            </extensionElements>
+            <flowNodeRef>_3953C50B-0EF2-4CC9-BD98-6AD2DC4E3265</flowNodeRef>
+            <flowNodeRef>_D1295129-4F63-4BA8-82FF-4C0C4CE4712C</flowNodeRef>
+         </lane>
+         <lane color:background-color="#ffffff" color:border-color="#000000" color:color="#000000" drools:selectable="true" id="_24D838F3-3B0F-49C8-B04D-9C49F8B717BD" name="Sistema de correos">
+            <extensionElements>
+               <drools:metaData name="elementname">
+                  <drools:metaValue>Sistema de correos</drools:metaValue>
+          </drools:metaData>
+            </extensionElements>
+            <flowNodeRef>_17ACEBE2-A691-4C38-B1DA-CB28F598BDDB</flowNodeRef>
+            <flowNodeRef>_D8ABCBAD-E310-4E2F-9FFF-A5110137454A</flowNodeRef>
+         </lane>
+      </laneSet>
+      <startEvent color:background-color="#9acd32" color:border-color="#000000" color:color="#000000" drools:selectable="true" id="processStartEvent" isInterrupting="true" name="">
+         <extensionElements>
+            <drools:metaData name="elementname">
+               <drools:metaValue/>
+        </drools:metaData>
+            <drools:metaData name="elementname">
+               <drools:metaValue/>
+        </drools:metaData>
+         </extensionElements>
+         <outgoing>_2FB81E47-91FB-444A-9223-C8A3DC349CB2</outgoing>
+      </startEvent>
+      <userTask color:background-color="#fafad2" color:border-color="#000000" color:color="#000000" completionQuantity="1" drools:scriptFormat="http://www.java.com/java" drools:selectable="true" id="_F89ACE36-66BC-49A9-A955-9F70A8A5DCE4" implementation="##unspecified" isForCompensation="false" name="Captura de Solicitud" startQuantity="1">
+         <extensionElements>
+            <drools:metaData name="elementname">
+               <drools:metaValue>Captura de Solicitud</drools:metaValue>
+        </drools:metaData>
+            <drools:onExit-script scriptFormat="http://www.java.com/java">
+               <drools:script>System.out.println("salgo de la tarea 1 ");</drools:script>
+        </drools:onExit-script>
+         </extensionElements>
+         <incoming>_2FB81E47-91FB-444A-9223-C8A3DC349CB2</incoming>
+         <incoming>_C7DBA375-4AA1-4736-9F9A-454EA04E9109</incoming>
+         <outgoing>_143F4A20-C0B8-45BF-9F79-14A796AAE330</outgoing>
+         <ioSpecification id="sid-35b694bf-5315-4595-b658-8bf564f0ee34">
+            <dataInput id="_F89ACE36-66BC-49A9-A955-9F70A8A5DCE4_TaskNameInputX" isCollection="false" name="TaskName"/>
+            <dataInput id="_F89ACE36-66BC-49A9-A955-9F70A8A5DCE4_inSolicitudCapturaInputX" isCollection="false" itemSubjectRef="__F89ACE36-66BC-49A9-A955-9F70A8A5DCE4_inSolicitudCapturaInputXItem" name="inSolicitudCaptura"/>
+            <dataInput id="_F89ACE36-66BC-49A9-A955-9F70A8A5DCE4_SkippableInputX" isCollection="false" itemSubjectRef="__F89ACE36-66BC-49A9-A955-9F70A8A5DCE4_SkippableInputXItem" name="Skippable"/>
+            <dataInput id="_F89ACE36-66BC-49A9-A955-9F70A8A5DCE4_GroupIdInputX" isCollection="false" itemSubjectRef="__F89ACE36-66BC-49A9-A955-9F70A8A5DCE4_GroupIdInputXItem" name="GroupId"/>
+            <dataOutput id="_F89ACE36-66BC-49A9-A955-9F70A8A5DCE4_outSolicitudCapturaOutputX" isCollection="false" itemSubjectRef="__F89ACE36-66BC-49A9-A955-9F70A8A5DCE4_outSolicitudCapturaOutputXItem" name="outSolicitudCaptura"/>
+            <dataOutput id="_F89ACE36-66BC-49A9-A955-9F70A8A5DCE4_outDocumentosOutputX" isCollection="false" itemSubjectRef="__F89ACE36-66BC-49A9-A955-9F70A8A5DCE4_outDocumentosOutputXItem" name="outDocumentos"/>
+            <inputSet id="_aD9WFj4XEeahK6ElTAcGSQ">
+               <dataInputRefs>_F89ACE36-66BC-49A9-A955-9F70A8A5DCE4_inSolicitudCapturaInputX</dataInputRefs>
+               <dataInputRefs>_F89ACE36-66BC-49A9-A955-9F70A8A5DCE4_SkippableInputX</dataInputRefs>
+               <dataInputRefs>_F89ACE36-66BC-49A9-A955-9F70A8A5DCE4_GroupIdInputX</dataInputRefs>
+               <dataInputRefs>_F89ACE36-66BC-49A9-A955-9F70A8A5DCE4_TaskNameInputX</dataInputRefs>
+               <outputSetRefs>_aD9WFz4XEeahK6ElTAcGSQ</outputSetRefs>
+            </inputSet>
+            <outputSet id="_aD9WFz4XEeahK6ElTAcGSQ">
+               <dataOutputRefs>_F89ACE36-66BC-49A9-A955-9F70A8A5DCE4_outSolicitudCapturaOutputX</dataOutputRefs>
+               <dataOutputRefs>_F89ACE36-66BC-49A9-A955-9F70A8A5DCE4_outDocumentosOutputX</dataOutputRefs>
+               <inputSetRefs>_aD9WFj4XEeahK6ElTAcGSQ</inputSetRefs>
+            </outputSet>
+         </ioSpecification>
+         <dataInputAssociation id="_aD9WGD4XEeahK6ElTAcGSQ">
+            <targetRef>_F89ACE36-66BC-49A9-A955-9F70A8A5DCE4_TaskNameInputX</targetRef>
+            <assignment>
+               <from xsi:type="tFormalExpression">CapturadeSolicitud</from>
+               <to xsi:type="tFormalExpression">_F89ACE36-66BC-49A9-A955-9F70A8A5DCE4_TaskNameInputX</to>
+            </assignment>
+         </dataInputAssociation>
+         <dataInputAssociation id="_aD9WHD4XEeahK6ElTAcGSQ">
+            <sourceRef>solicitudCaptura</sourceRef>
+            <targetRef>_F89ACE36-66BC-49A9-A955-9F70A8A5DCE4_inSolicitudCapturaInputX</targetRef>
+         </dataInputAssociation>
+         <dataInputAssociation id="_aD9WHT4XEeahK6ElTAcGSQ">
+            <targetRef>_F89ACE36-66BC-49A9-A955-9F70A8A5DCE4_GroupIdInputX</targetRef>
+            <assignment>
+               <from xsi:type="tFormalExpression">ejecutivoCuenta</from>
+               <to xsi:type="tFormalExpression">_F89ACE36-66BC-49A9-A955-9F70A8A5DCE4_GroupIdInputX</to>
+            </assignment>
+         </dataInputAssociation>
+         <dataInputAssociation id="_aD9WIT4XEeahK6ElTAcGSQ">
+            <targetRef>_F89ACE36-66BC-49A9-A955-9F70A8A5DCE4_SkippableInputX</targetRef>
+            <assignment>
+               <from xsi:type="tFormalExpression">true</from>
+               <to xsi:type="tFormalExpression">_F89ACE36-66BC-49A9-A955-9F70A8A5DCE4_SkippableInputX</to>
+            </assignment>
+         </dataInputAssociation>
+         <dataOutputAssociation id="_aD9WJT4XEeahK6ElTAcGSQ">
+            <sourceRef>_F89ACE36-66BC-49A9-A955-9F70A8A5DCE4_outSolicitudCapturaOutputX</sourceRef>
+            <targetRef>solicitudCaptura</targetRef>
+         </dataOutputAssociation>
+         <dataOutputAssociation id="_aD9WJj4XEeahK6ElTAcGSQ">
+            <sourceRef>_F89ACE36-66BC-49A9-A955-9F70A8A5DCE4_outDocumentosOutputX</sourceRef>
+            <targetRef>documentos</targetRef>
+         </dataOutputAssociation>
+      </userTask>
+      <userTask color:background-color="#fafad2" color:border-color="#000000" color:color="#000000" completionQuantity="1" drools:scriptFormat="http://www.java.com/java" drools:selectable="true" id="_F7944FF9-913C-41D5-8ED6-6F831F824FB8" implementation="##unspecified" isForCompensation="false" name="Revisa y aprueba solicitud" startQuantity="1">
+         <extensionElements>
+            <drools:metaData name="elementname">
+               <drools:metaValue>Revisa y aprueba solicitud</drools:metaValue>
+        </drools:metaData>
+            <drools:onEntry-script scriptFormat="http://www.java.com/java">
+               <drools:script>System.out.println("ENTRANDO");System.out.println("....");
+System.out.println("Monto 2 " + resolucionDictamen.getResolucion().getMonto());System.out.println("Plazo 2 " + resolucionDictamen.getResolucion().getPlazo());System.out.println("Condiciones 2 " + resolucionDictamen.getResolucion().getCondiciones());</drools:script>
+        </drools:onEntry-script>
+            <drools:onExit-script scriptFormat="http://www.java.com/java">
+               <drools:script>System.out.println("cliente acepta de form: "+ resolucionDictamen.getResolucion().getClienteAcepta()+".");
+
+System.out.println("condicion: "+(resolucionDictamen.getResolucion().getClienteAcepta().trim().equals("Si")));
+System.out.println("condicion2: "+(resolucionDictamen.getResolucion().getClienteAcepta().trim().equals("No")));
+
+if (resolucionDictamen.getResolucion().getClienteAcepta().trim().equals("Si"))
+{
+  clienteAcepta = "Si";
+}
+else if(resolucionDictamen.getResolucion().getClienteAcepta().trim().equals("No"))
+{
+  clienteAcepta = "No";
+}else{
+   clienteAcepta = "Vacio";
+}
+
+kcontext.setVariable("clienteAcepta",clienteAcepta);
+
+System.out.println("cliente Acepta? "+clienteAcepta);</drools:script>
+        </drools:onExit-script>
+         </extensionElements>
+         <incoming>_6E68AEA1-A8B3-45C6-BDB8-567CDDEC9B45</incoming>
+         <outgoing>_65CA641A-BFBA-484A-94A9-DA0173382882</outgoing>
+         <ioSpecification id="sid-843b5c83-b834-4a12-8ab9-b3b39bcda8f9">
+            <dataInput id="_F7944FF9-913C-41D5-8ED6-6F831F824FB8_TaskNameInputX" isCollection="false" name="TaskName"/>
+            <dataInput id="_F7944FF9-913C-41D5-8ED6-6F831F824FB8_inSolicitudCapturaInputX" isCollection="false" itemSubjectRef="__F7944FF9-913C-41D5-8ED6-6F831F824FB8_inSolicitudCapturaInputXItem" name="inSolicitudCaptura"/>
+            <dataInput id="_F7944FF9-913C-41D5-8ED6-6F831F824FB8_inResolucionDictamenInputX" isCollection="false" itemSubjectRef="__F7944FF9-913C-41D5-8ED6-6F831F824FB8_inResolucionDictamenInputXItem" name="inResolucionDictamen"/>
+            <dataInput id="_F7944FF9-913C-41D5-8ED6-6F831F824FB8_inDocumentosInputX" isCollection="false" itemSubjectRef="__F7944FF9-913C-41D5-8ED6-6F831F824FB8_inDocumentosInputXItem" name="inDocumentos"/>
+            <dataInput id="_F7944FF9-913C-41D5-8ED6-6F831F824FB8_SkippableInputX" isCollection="false" itemSubjectRef="__F7944FF9-913C-41D5-8ED6-6F831F824FB8_SkippableInputXItem" name="Skippable"/>
+            <dataInput id="_F7944FF9-913C-41D5-8ED6-6F831F824FB8_GroupIdInputX" isCollection="false" itemSubjectRef="__F7944FF9-913C-41D5-8ED6-6F831F824FB8_GroupIdInputXItem" name="GroupId"/>
+            <dataOutput id="_F7944FF9-913C-41D5-8ED6-6F831F824FB8_outSolicitudCapturaOutputX" isCollection="false" itemSubjectRef="__F7944FF9-913C-41D5-8ED6-6F831F824FB8_outSolicitudCapturaOutputXItem" name="outSolicitudCaptura"/>
+            <dataOutput id="_F7944FF9-913C-41D5-8ED6-6F831F824FB8_outResolucionDictamenOutputX" isCollection="false" itemSubjectRef="__F7944FF9-913C-41D5-8ED6-6F831F824FB8_outResolucionDictamenOutputXItem" name="outResolucionDictamen"/>
+            <inputSet id="_aD9WKD4XEeahK6ElTAcGSQ">
+               <dataInputRefs>_F7944FF9-913C-41D5-8ED6-6F831F824FB8_inSolicitudCapturaInputX</dataInputRefs>
+               <dataInputRefs>_F7944FF9-913C-41D5-8ED6-6F831F824FB8_inResolucionDictamenInputX</dataInputRefs>
+               <dataInputRefs>_F7944FF9-913C-41D5-8ED6-6F831F824FB8_inDocumentosInputX</dataInputRefs>
+               <dataInputRefs>_F7944FF9-913C-41D5-8ED6-6F831F824FB8_SkippableInputX</dataInputRefs>
+               <dataInputRefs>_F7944FF9-913C-41D5-8ED6-6F831F824FB8_GroupIdInputX</dataInputRefs>
+               <dataInputRefs>_F7944FF9-913C-41D5-8ED6-6F831F824FB8_TaskNameInputX</dataInputRefs>
+               <outputSetRefs>_aD9WKT4XEeahK6ElTAcGSQ</outputSetRefs>
+            </inputSet>
+            <outputSet id="_aD9WKT4XEeahK6ElTAcGSQ">
+               <dataOutputRefs>_F7944FF9-913C-41D5-8ED6-6F831F824FB8_outSolicitudCapturaOutputX</dataOutputRefs>
+               <dataOutputRefs>_F7944FF9-913C-41D5-8ED6-6F831F824FB8_outResolucionDictamenOutputX</dataOutputRefs>
+               <inputSetRefs>_aD9WKD4XEeahK6ElTAcGSQ</inputSetRefs>
+            </outputSet>
+         </ioSpecification>
+         <dataInputAssociation id="_aD9WKj4XEeahK6ElTAcGSQ">
+            <targetRef>_F7944FF9-913C-41D5-8ED6-6F831F824FB8_TaskNameInputX</targetRef>
+            <assignment>
+               <from xsi:type="tFormalExpression">RevisaYApruebaSolicitud</from>
+               <to xsi:type="tFormalExpression">_F7944FF9-913C-41D5-8ED6-6F831F824FB8_TaskNameInputX</to>
+            </assignment>
+         </dataInputAssociation>
+         <dataInputAssociation id="_aD9WLj4XEeahK6ElTAcGSQ">
+            <sourceRef>solicitudCaptura</sourceRef>
+            <targetRef>_F7944FF9-913C-41D5-8ED6-6F831F824FB8_inSolicitudCapturaInputX</targetRef>
+         </dataInputAssociation>
+         <dataInputAssociation id="_aD9WLz4XEeahK6ElTAcGSQ">
+            <sourceRef>resolucionDictamen</sourceRef>
+            <targetRef>_F7944FF9-913C-41D5-8ED6-6F831F824FB8_inResolucionDictamenInputX</targetRef>
+         </dataInputAssociation>
+         <dataInputAssociation id="_aD9WMD4XEeahK6ElTAcGSQ">
+            <sourceRef>documentos</sourceRef>
+            <targetRef>_F7944FF9-913C-41D5-8ED6-6F831F824FB8_inDocumentosInputX</targetRef>
+         </dataInputAssociation>
+         <dataInputAssociation id="_aD9WMT4XEeahK6ElTAcGSQ">
+            <targetRef>_F7944FF9-913C-41D5-8ED6-6F831F824FB8_GroupIdInputX</targetRef>
+            <assignment>
+               <from xsi:type="tFormalExpression">ejecutivoCuenta</from>
+               <to xsi:type="tFormalExpression">_F7944FF9-913C-41D5-8ED6-6F831F824FB8_GroupIdInputX</to>
+            </assignment>
+         </dataInputAssociation>
+         <dataInputAssociation id="_aD9WNT4XEeahK6ElTAcGSQ">
+            <targetRef>_F7944FF9-913C-41D5-8ED6-6F831F824FB8_SkippableInputX</targetRef>
+            <assignment>
+               <from xsi:type="tFormalExpression">true</from>
+               <to xsi:type="tFormalExpression">_F7944FF9-913C-41D5-8ED6-6F831F824FB8_SkippableInputX</to>
+            </assignment>
+         </dataInputAssociation>
+         <dataOutputAssociation id="_aD9WOT4XEeahK6ElTAcGSQ">
+            <sourceRef>_F7944FF9-913C-41D5-8ED6-6F831F824FB8_outSolicitudCapturaOutputX</sourceRef>
+            <targetRef>solicitudCaptura</targetRef>
+         </dataOutputAssociation>
+         <dataOutputAssociation id="_aD9WOj4XEeahK6ElTAcGSQ">
+            <sourceRef>_F7944FF9-913C-41D5-8ED6-6F831F824FB8_outResolucionDictamenOutputX</sourceRef>
+            <targetRef>resolucionDictamen</targetRef>
+         </dataOutputAssociation>
+      </userTask>
+      <userTask color:background-color="#fafad2" color:border-color="#000000" color:color="#000000" completionQuantity="1" drools:scriptFormat="http://www.java.com/java" drools:selectable="true" id="_38C44B9F-0F9A-4CEE-8090-D865AC790921" implementation="##unspecified" isForCompensation="false" name="Impresion y firma del contrato" startQuantity="1">
+         <extensionElements>
+            <drools:metaData name="elementname">
+               <drools:metaValue>Impresion y firma del contrato</drools:metaValue>
+        </drools:metaData>
+         </extensionElements>
+         <incoming>_5F82940B-597B-4D8E-8663-1E8095CCB78C</incoming>
+         <outgoing>_54E8BE13-3E98-4DE5-A998-AC6575F7D949</outgoing>
+         <ioSpecification id="sid-d6a2c236-707d-41fa-906c-987f8a3c9dec">
+            <dataInput id="_38C44B9F-0F9A-4CEE-8090-D865AC790921_TaskNameInputX" isCollection="false" name="TaskName"/>
+            <dataInput id="_38C44B9F-0F9A-4CEE-8090-D865AC790921_inSolicitudCapturaInputX" isCollection="false" itemSubjectRef="__38C44B9F-0F9A-4CEE-8090-D865AC790921_inSolicitudCapturaInputXItem" name="inSolicitudCaptura"/>
+            <dataInput id="_38C44B9F-0F9A-4CEE-8090-D865AC790921_inResolucionDictamenInputX" isCollection="false" itemSubjectRef="__38C44B9F-0F9A-4CEE-8090-D865AC790921_inResolucionDictamenInputXItem" name="inResolucionDictamen"/>
+            <dataInput id="_38C44B9F-0F9A-4CEE-8090-D865AC790921_SkippableInputX" isCollection="false" itemSubjectRef="__38C44B9F-0F9A-4CEE-8090-D865AC790921_SkippableInputXItem" name="Skippable"/>
+            <dataInput id="_38C44B9F-0F9A-4CEE-8090-D865AC790921_GroupIdInputX" isCollection="false" itemSubjectRef="__38C44B9F-0F9A-4CEE-8090-D865AC790921_GroupIdInputXItem" name="GroupId"/>
+            <dataOutput id="_38C44B9F-0F9A-4CEE-8090-D865AC790921_outSolicitudCapturaOutputX" isCollection="false" itemSubjectRef="__38C44B9F-0F9A-4CEE-8090-D865AC790921_outSolicitudCapturaOutputXItem" name="outSolicitudCaptura"/>
+            <dataOutput id="_38C44B9F-0F9A-4CEE-8090-D865AC790921_outResolucionDictamenOutputX" isCollection="false" itemSubjectRef="__38C44B9F-0F9A-4CEE-8090-D865AC790921_outResolucionDictamenOutputXItem" name="outResolucionDictamen"/>
+            <inputSet id="_aD9WPD4XEeahK6ElTAcGSQ">
+               <dataInputRefs>_38C44B9F-0F9A-4CEE-8090-D865AC790921_inSolicitudCapturaInputX</dataInputRefs>
+               <dataInputRefs>_38C44B9F-0F9A-4CEE-8090-D865AC790921_inResolucionDictamenInputX</dataInputRefs>
+               <dataInputRefs>_38C44B9F-0F9A-4CEE-8090-D865AC790921_SkippableInputX</dataInputRefs>
+               <dataInputRefs>_38C44B9F-0F9A-4CEE-8090-D865AC790921_GroupIdInputX</dataInputRefs>
+               <dataInputRefs>_38C44B9F-0F9A-4CEE-8090-D865AC790921_TaskNameInputX</dataInputRefs>
+               <outputSetRefs>_aD9WPT4XEeahK6ElTAcGSQ</outputSetRefs>
+            </inputSet>
+            <outputSet id="_aD9WPT4XEeahK6ElTAcGSQ">
+               <dataOutputRefs>_38C44B9F-0F9A-4CEE-8090-D865AC790921_outSolicitudCapturaOutputX</dataOutputRefs>
+               <dataOutputRefs>_38C44B9F-0F9A-4CEE-8090-D865AC790921_outResolucionDictamenOutputX</dataOutputRefs>
+               <inputSetRefs>_aD9WPD4XEeahK6ElTAcGSQ</inputSetRefs>
+            </outputSet>
+         </ioSpecification>
+         <dataInputAssociation id="_aD9WPj4XEeahK6ElTAcGSQ">
+            <targetRef>_38C44B9F-0F9A-4CEE-8090-D865AC790921_TaskNameInputX</targetRef>
+            <assignment>
+               <from xsi:type="tFormalExpression">Impresionyfirmadelcontrato</from>
+               <to xsi:type="tFormalExpression">_38C44B9F-0F9A-4CEE-8090-D865AC790921_TaskNameInputX</to>
+            </assignment>
+         </dataInputAssociation>
+         <dataInputAssociation id="_aD9WQj4XEeahK6ElTAcGSQ">
+            <sourceRef>solicitudCaptura</sourceRef>
+            <targetRef>_38C44B9F-0F9A-4CEE-8090-D865AC790921_inSolicitudCapturaInputX</targetRef>
+         </dataInputAssociation>
+         <dataInputAssociation id="_aD9WQz4XEeahK6ElTAcGSQ">
+            <sourceRef>resolucionDictamen</sourceRef>
+            <targetRef>_38C44B9F-0F9A-4CEE-8090-D865AC790921_inResolucionDictamenInputX</targetRef>
+         </dataInputAssociation>
+         <dataInputAssociation id="_aD9WRD4XEeahK6ElTAcGSQ">
+            <targetRef>_38C44B9F-0F9A-4CEE-8090-D865AC790921_GroupIdInputX</targetRef>
+            <assignment>
+               <from xsi:type="tFormalExpression">ejecutivoCuenta</from>
+               <to xsi:type="tFormalExpression">_38C44B9F-0F9A-4CEE-8090-D865AC790921_GroupIdInputX</to>
+            </assignment>
+         </dataInputAssociation>
+         <dataInputAssociation id="_aD9WSD4XEeahK6ElTAcGSQ">
+            <targetRef>_38C44B9F-0F9A-4CEE-8090-D865AC790921_SkippableInputX</targetRef>
+            <assignment>
+               <from xsi:type="tFormalExpression">true</from>
+               <to xsi:type="tFormalExpression">_38C44B9F-0F9A-4CEE-8090-D865AC790921_SkippableInputX</to>
+            </assignment>
+         </dataInputAssociation>
+         <dataOutputAssociation id="_aD9WTD4XEeahK6ElTAcGSQ">
+            <sourceRef>_38C44B9F-0F9A-4CEE-8090-D865AC790921_outSolicitudCapturaOutputX</sourceRef>
+            <targetRef>solicitudCaptura</targetRef>
+         </dataOutputAssociation>
+         <dataOutputAssociation id="_aD9WTT4XEeahK6ElTAcGSQ">
+            <sourceRef>_38C44B9F-0F9A-4CEE-8090-D865AC790921_outResolucionDictamenOutputX</sourceRef>
+            <targetRef>resolucionDictamen</targetRef>
+         </dataOutputAssociation>
+      </userTask>
+      <userTask color:background-color="#fafad2" color:border-color="#000000" color:color="#000000" completionQuantity="1" drools:scriptFormat="http://www.java.com/java" drools:selectable="true" id="_7E897125-4679-475E-923C-596A17AF09AA" implementation="##unspecified" isForCompensation="false" name="Revisar Solicitud" startQuantity="1">
+         <extensionElements>
+            <drools:metaData name="elementname">
+               <drools:metaValue>Revisar Solicitud</drools:metaValue>
+        </drools:metaData>
+            <drools:onExit-script scriptFormat="http://www.java.com/java">
+               <drools:script>correoDesde = "carlos.martin@alkimiaconsultores.com";
+correoAsunto = "Dictamen Aprobado";
+
+cliente clienteVar = new cliente();
+
+clienteVar = solicitudCaptura.getCliente();
+
+correoMensaje = "Estimado "+ clienteVar.getNombre() + clienteVar.getApPaterno() + clienteVar.getApMaterno() +"necesitamos que se presente en sucursal para revisar unos detalles con su solicitud de credito.";
+
+correoHacia = clienteVar.getEmail();
+
+dictamen dictamenVar = new dictamen();
+
+dictamenVar = resolucionDictamen.getDictamen();
+
+detallesDictamen = dictamenVar.getAprobado() + "---" + dictamenVar.getObservaciones();</drools:script>
+        </drools:onExit-script>
+         </extensionElements>
+         <incoming>_45655BAD-BEED-461F-8E3F-70003DBC4185</incoming>
+         <outgoing>_5B224D96-FBB6-4E86-9144-C2F189D06AE0</outgoing>
+         <ioSpecification id="sid-51425bac-c34b-4bf9-bba0-402870085e1f">
+            <dataInput id="_7E897125-4679-475E-923C-596A17AF09AA_TaskNameInputX" isCollection="false" name="TaskName"/>
+            <dataInput id="_7E897125-4679-475E-923C-596A17AF09AA_inSolicitudCapturaInputX" isCollection="false" itemSubjectRef="__7E897125-4679-475E-923C-596A17AF09AA_inSolicitudCapturaInputXItem" name="inSolicitudCaptura"/>
+            <dataInput id="_7E897125-4679-475E-923C-596A17AF09AA_inResolucionDictamenInputX" isCollection="false" itemSubjectRef="__7E897125-4679-475E-923C-596A17AF09AA_inResolucionDictamenInputXItem" name="inResolucionDictamen"/>
+            <dataInput id="_7E897125-4679-475E-923C-596A17AF09AA_SkippableInputX" isCollection="false" itemSubjectRef="__7E897125-4679-475E-923C-596A17AF09AA_SkippableInputXItem" name="Skippable"/>
+            <dataInput id="_7E897125-4679-475E-923C-596A17AF09AA_GroupIdInputX" isCollection="false" itemSubjectRef="__7E897125-4679-475E-923C-596A17AF09AA_GroupIdInputXItem" name="GroupId"/>
+            <dataOutput id="_7E897125-4679-475E-923C-596A17AF09AA_outSolicitudCapturaOutputX" isCollection="false" itemSubjectRef="__7E897125-4679-475E-923C-596A17AF09AA_outSolicitudCapturaOutputXItem" name="outSolicitudCaptura"/>
+            <dataOutput id="_7E897125-4679-475E-923C-596A17AF09AA_outResolucionDictamenOutputX" isCollection="false" itemSubjectRef="__7E897125-4679-475E-923C-596A17AF09AA_outResolucionDictamenOutputXItem" name="outResolucionDictamen"/>
+            <dataOutput id="_7E897125-4679-475E-923C-596A17AF09AA_outReconsideracionOutputX" isCollection="false" itemSubjectRef="__7E897125-4679-475E-923C-596A17AF09AA_outReconsideracionOutputXItem" name="outReconsideracion"/>
+            <inputSet id="_aD9WTz4XEeahK6ElTAcGSQ">
+               <dataInputRefs>_7E897125-4679-475E-923C-596A17AF09AA_inSolicitudCapturaInputX</dataInputRefs>
+               <dataInputRefs>_7E897125-4679-475E-923C-596A17AF09AA_inResolucionDictamenInputX</dataInputRefs>
+               <dataInputRefs>_7E897125-4679-475E-923C-596A17AF09AA_SkippableInputX</dataInputRefs>
+               <dataInputRefs>_7E897125-4679-475E-923C-596A17AF09AA_GroupIdInputX</dataInputRefs>
+               <dataInputRefs>_7E897125-4679-475E-923C-596A17AF09AA_TaskNameInputX</dataInputRefs>
+               <outputSetRefs>_aD9WUD4XEeahK6ElTAcGSQ</outputSetRefs>
+            </inputSet>
+            <outputSet id="_aD9WUD4XEeahK6ElTAcGSQ">
+               <dataOutputRefs>_7E897125-4679-475E-923C-596A17AF09AA_outSolicitudCapturaOutputX</dataOutputRefs>
+               <dataOutputRefs>_7E897125-4679-475E-923C-596A17AF09AA_outResolucionDictamenOutputX</dataOutputRefs>
+               <dataOutputRefs>_7E897125-4679-475E-923C-596A17AF09AA_outReconsideracionOutputX</dataOutputRefs>
+               <inputSetRefs>_aD9WTz4XEeahK6ElTAcGSQ</inputSetRefs>
+            </outputSet>
+         </ioSpecification>
+         <dataInputAssociation id="_aD9WUT4XEeahK6ElTAcGSQ">
+            <targetRef>_7E897125-4679-475E-923C-596A17AF09AA_TaskNameInputX</targetRef>
+            <assignment>
+               <from xsi:type="tFormalExpression">RevisarSolicitud</from>
+               <to xsi:type="tFormalExpression">_7E897125-4679-475E-923C-596A17AF09AA_TaskNameInputX</to>
+            </assignment>
+         </dataInputAssociation>
+         <dataInputAssociation id="_aD9WVT4XEeahK6ElTAcGSQ">
+            <sourceRef>solicitudCaptura</sourceRef>
+            <targetRef>_7E897125-4679-475E-923C-596A17AF09AA_inSolicitudCapturaInputX</targetRef>
+         </dataInputAssociation>
+         <dataInputAssociation id="_aD9WVj4XEeahK6ElTAcGSQ">
+            <sourceRef>resolucionDictamen</sourceRef>
+            <targetRef>_7E897125-4679-475E-923C-596A17AF09AA_inResolucionDictamenInputX</targetRef>
+         </dataInputAssociation>
+         <dataInputAssociation id="_aD9WVz4XEeahK6ElTAcGSQ">
+            <targetRef>_7E897125-4679-475E-923C-596A17AF09AA_GroupIdInputX</targetRef>
+            <assignment>
+               <from xsi:type="tFormalExpression">ejecutivoCuenta</from>
+               <to xsi:type="tFormalExpression">_7E897125-4679-475E-923C-596A17AF09AA_GroupIdInputX</to>
+            </assignment>
+         </dataInputAssociation>
+         <dataInputAssociation id="_aD9WWz4XEeahK6ElTAcGSQ">
+            <targetRef>_7E897125-4679-475E-923C-596A17AF09AA_SkippableInputX</targetRef>
+            <assignment>
+               <from xsi:type="tFormalExpression">true</from>
+               <to xsi:type="tFormalExpression">_7E897125-4679-475E-923C-596A17AF09AA_SkippableInputX</to>
+            </assignment>
+         </dataInputAssociation>
+         <dataOutputAssociation id="_aD9WXz4XEeahK6ElTAcGSQ">
+            <sourceRef>_7E897125-4679-475E-923C-596A17AF09AA_outSolicitudCapturaOutputX</sourceRef>
+            <targetRef>solicitudCaptura</targetRef>
+         </dataOutputAssociation>
+         <dataOutputAssociation id="_aD9WYD4XEeahK6ElTAcGSQ">
+            <sourceRef>_7E897125-4679-475E-923C-596A17AF09AA_outResolucionDictamenOutputX</sourceRef>
+            <targetRef>resolucionDictamen</targetRef>
+         </dataOutputAssociation>
+         <dataOutputAssociation id="_aD9WYT4XEeahK6ElTAcGSQ">
+            <sourceRef>_7E897125-4679-475E-923C-596A17AF09AA_outReconsideracionOutputX</sourceRef>
+            <targetRef>reconsideracion</targetRef>
+         </dataOutputAssociation>
+      </userTask>
+      <exclusiveGateway color:background-color="#f0e68c" color:border-color="#a67f00" color:color="#000000" drools:dg="" drools:selectable="true" gatewayDirection="Diverging" id="_1F1DAF3C-7E04-4126-A058-667E992504A0" name="Reconsideracion?">
+         <extensionElements>
+            <drools:metaData name="elementname">
+               <drools:metaValue>Reconsideracion?</drools:metaValue>
+        </drools:metaData>
+         </extensionElements>
+         <incoming>_5B224D96-FBB6-4E86-9144-C2F189D06AE0</incoming>
+         <outgoing>_E847DC65-7C29-499D-9C1E-0449BB55481E</outgoing>
+         <outgoing>_74705F8E-A716-4394-8048-0AAB3639A965</outgoing>
+      </exclusiveGateway>
+      <scriptTask color:background-color="#fafad2" color:border-color="#000000" color:color="#000000" completionQuantity="1" drools:selectable="true" id="_7A936D33-9D8B-407A-BCF5-5622AC7F54DC" isForCompensation="false" name="Envio de email" scriptFormat="http://www.java.com/java" startQuantity="1">
+         <extensionElements>
+            <drools:metaData name="elementname">
+               <drools:metaValue>Envio de email</drools:metaValue>
+        </drools:metaData>
+         </extensionElements>
+         <incoming>_E847DC65-7C29-499D-9C1E-0449BB55481E</incoming>
+         <outgoing>_C7DBA375-4AA1-4736-9F9A-454EA04E9109</outgoing>
+         <script>System.out.println("envio de email");</script>
+      </scriptTask>
+      <scriptTask color:background-color="#fafad2" color:border-color="#000000" color:color="#000000" completionQuantity="1" drools:selectable="true" id="_E521D1F1-D370-40D6-B996-3895F6B0A78C" isForCompensation="false" name="Evaluacion Preliminar" scriptFormat="http://www.java.com/java" startQuantity="1">
+         <extensionElements>
+            <drools:metaData name="elementname">
+               <drools:metaValue>Evaluacion Preliminar</drools:metaValue>
+        </drools:metaData>
+            <drools:onEntry-script scriptFormat="http://www.java.com/java">
+               <drools:script>System.out.println("entro a la tarea 2");</drools:script>
+        </drools:onEntry-script>
+         </extensionElements>
+         <incoming>_143F4A20-C0B8-45BF-9F79-14A796AAE330</incoming>
+         <outgoing>_6E68AEA1-A8B3-45C6-BDB8-567CDDEC9B45</outgoing>
+         <ioSpecification id="sid-3afe6190-c948-45cf-bb75-76076937d0b5">
+            <dataInput id="_E521D1F1-D370-40D6-B996-3895F6B0A78C_TaskNameInputX" isCollection="false" name="TaskName"/>
+            <dataInput id="_E521D1F1-D370-40D6-B996-3895F6B0A78C_SkippableInputX" isCollection="false" itemSubjectRef="__E521D1F1-D370-40D6-B996-3895F6B0A78C_SkippableInputXItem" name="Skippable"/>
+            <dataInput id="_E521D1F1-D370-40D6-B996-3895F6B0A78C_GroupIdInputX" isCollection="false" itemSubjectRef="__E521D1F1-D370-40D6-B996-3895F6B0A78C_GroupIdInputXItem" name="GroupId"/>
+            <inputSet id="_aD9WYz4XEeahK6ElTAcGSQ">
+               <dataInputRefs>_E521D1F1-D370-40D6-B996-3895F6B0A78C_SkippableInputX</dataInputRefs>
+               <dataInputRefs>_E521D1F1-D370-40D6-B996-3895F6B0A78C_GroupIdInputX</dataInputRefs>
+               <dataInputRefs>_E521D1F1-D370-40D6-B996-3895F6B0A78C_TaskNameInputX</dataInputRefs>
+               <outputSetRefs>sid-973da9b6-d038-4cbd-8e2e-e9a00906a445</outputSetRefs>
+            </inputSet>
+         </ioSpecification>
+         <dataInputAssociation id="_aD9WZT4XEeahK6ElTAcGSQ">
+            <targetRef>_E521D1F1-D370-40D6-B996-3895F6B0A78C_TaskNameInputX</targetRef>
+            <assignment>
+               <from xsi:type="tFormalExpression">EvaluacionPreliminar</from>
+               <to xsi:type="tFormalExpression">_E521D1F1-D370-40D6-B996-3895F6B0A78C_TaskNameInputX</to>
+            </assignment>
+         </dataInputAssociation>
+         <script>System.out.println("Se evalua la solicitud de credito");
+
+montoCredito = 10000;
+plazo = "12 Meses";
+condiciones = "Las condiciones estan marcadas en el contrato";
+resolucionDictamen = new resolucionDictamen();
+
+resolucionDictamen.setResolucion(new resolucionCredito());
+resolucionDictamen.getResolucion().setMonto(montoCredito);
+resolucionDictamen.getResolucion().setPlazo(plazo);
+resolucionDictamen.getResolucion().setCondiciones(condiciones);
+
+
+System.out.println("Monto " + resolucionDictamen.getResolucion().getMonto());
+System.out.println("Plazo " + resolucionDictamen.getResolucion().getPlazo());
+System.out.println("Condiciones " + resolucionDictamen.getResolucion().getCondiciones());
+
+kcontext.setVariable("resolucionDictamen",resolucionDictamen);</script>
+      </scriptTask>
+      <exclusiveGateway color:background-color="#f0e68c" color:border-color="#a67f00" color:color="#000000" default="_928F65A5-4F8B-4580-BCDA-D64C17CD7650" drools:dg="Si : _928F65A5-4F8B-4580-BCDA-D64C17CD7650" drools:selectable="true" gatewayDirection="Diverging" id="_986E7B78-876B-42D0-9BCD-85A34D62BEC4" name="cliente acepta?">
+         <extensionElements>
+            <drools:metaData name="elementname">
+               <drools:metaValue>cliente acepta?</drools:metaValue>
+        </drools:metaData>
+         </extensionElements>
+         <incoming>_65CA641A-BFBA-484A-94A9-DA0173382882</incoming>
+         <outgoing>_ED8F57B7-2844-46A7-9A67-87560750F6D3</outgoing>
+         <outgoing>_928F65A5-4F8B-4580-BCDA-D64C17CD7650</outgoing>
+      </exclusiveGateway>
+      <endEvent color:background-color="#ff6347" color:border-color="#000000" color:color="#000000" drools:selectable="true" id="_90D4A08A-AF75-4978-A582-71C5A45E13ED" name="">
+         <extensionElements>
+            <drools:metaData name="elementname">
+               <drools:metaValue/>
+        </drools:metaData>
+            <drools:metaData name="elementname">
+               <drools:metaValue/>
+        </drools:metaData>
+         </extensionElements>
+         <incoming>_ED8F57B7-2844-46A7-9A67-87560750F6D3</incoming>
+         <incoming>_74705F8E-A716-4394-8048-0AAB3639A965</incoming>
+      </endEvent>
+      <userTask color:background-color="#fafad2" color:border-color="#000000" color:color="#000000" completionQuantity="1" drools:scriptFormat="http://www.java.com/java" drools:selectable="true" id="_232017C7-F3FE-455E-A21E-2CA712FABF52" implementation="##unspecified" isForCompensation="false" name="Dictamen Crediticio " startQuantity="1">
+         <extensionElements>
+            <drools:metaData name="elementname">
+               <drools:metaValue>Dictamen Crediticio
+</drools:metaValue>
+        </drools:metaData>
+            <drools:onExit-script scriptFormat="http://www.java.com/java">
+               <drools:script>if (resolucionDictamen.getResolucion().getClienteAcepta().trim().equals("Si"))
+
+if (resolucionDictamen.getDictamen().getAprobado().trim().equals("Si"))
+{
+dictamenAprueba = "Si";
+}else if(resolucionDictamen.getDictamen().getAprobado().trim().equals("No")){
+dictamenAprueba = "No";
+}
+
+kcontext.setVariable("dictamenAprueba",dictamenAprueba);
+
+System.out.println("dictamen aprobado? "+dictamenAprueba);</drools:script>
+        </drools:onExit-script>
+         </extensionElements>
+         <incoming>_928F65A5-4F8B-4580-BCDA-D64C17CD7650</incoming>
+         <outgoing>_03163F6D-FABD-42AF-9097-01131099F114</outgoing>
+         <ioSpecification id="sid-156d00a4-2fd2-4d6d-87e1-f9a4c1c6a0d7">
+            <dataInput id="_232017C7-F3FE-455E-A21E-2CA712FABF52_TaskNameInputX" isCollection="false" name="TaskName"/>
+            <dataInput id="_232017C7-F3FE-455E-A21E-2CA712FABF52_inSolicitudCapturaInputX" isCollection="false" itemSubjectRef="__232017C7-F3FE-455E-A21E-2CA712FABF52_inSolicitudCapturaInputXItem" name="inSolicitudCaptura"/>
+            <dataInput id="_232017C7-F3FE-455E-A21E-2CA712FABF52_inResolucionDictamenInputX" isCollection="false" itemSubjectRef="__232017C7-F3FE-455E-A21E-2CA712FABF52_inResolucionDictamenInputXItem" name="inResolucionDictamen"/>
+            <dataInput id="_232017C7-F3FE-455E-A21E-2CA712FABF52_SkippableInputX" isCollection="false" itemSubjectRef="__232017C7-F3FE-455E-A21E-2CA712FABF52_SkippableInputXItem" name="Skippable"/>
+            <dataInput id="_232017C7-F3FE-455E-A21E-2CA712FABF52_GroupIdInputX" isCollection="false" itemSubjectRef="__232017C7-F3FE-455E-A21E-2CA712FABF52_GroupIdInputXItem" name="GroupId"/>
+            <dataOutput id="_232017C7-F3FE-455E-A21E-2CA712FABF52_outSolicitudCapturaOutputX" isCollection="false" itemSubjectRef="__232017C7-F3FE-455E-A21E-2CA712FABF52_outSolicitudCapturaOutputXItem" name="outSolicitudCaptura"/>
+            <dataOutput id="_232017C7-F3FE-455E-A21E-2CA712FABF52_outResolucionDictamenOutputX" isCollection="false" itemSubjectRef="__232017C7-F3FE-455E-A21E-2CA712FABF52_outResolucionDictamenOutputXItem" name="outResolucionDictamen"/>
+            <inputSet id="_aD9Waj4XEeahK6ElTAcGSQ">
+               <dataInputRefs>_232017C7-F3FE-455E-A21E-2CA712FABF52_inSolicitudCapturaInputX</dataInputRefs>
+               <dataInputRefs>_232017C7-F3FE-455E-A21E-2CA712FABF52_inResolucionDictamenInputX</dataInputRefs>
+               <dataInputRefs>_232017C7-F3FE-455E-A21E-2CA712FABF52_SkippableInputX</dataInputRefs>
+               <dataInputRefs>_232017C7-F3FE-455E-A21E-2CA712FABF52_GroupIdInputX</dataInputRefs>
+               <dataInputRefs>_232017C7-F3FE-455E-A21E-2CA712FABF52_TaskNameInputX</dataInputRefs>
+               <outputSetRefs>_aD9Waz4XEeahK6ElTAcGSQ</outputSetRefs>
+            </inputSet>
+            <outputSet id="_aD9Waz4XEeahK6ElTAcGSQ">
+               <dataOutputRefs>_232017C7-F3FE-455E-A21E-2CA712FABF52_outSolicitudCapturaOutputX</dataOutputRefs>
+               <dataOutputRefs>_232017C7-F3FE-455E-A21E-2CA712FABF52_outResolucionDictamenOutputX</dataOutputRefs>
+               <inputSetRefs>_aD9Waj4XEeahK6ElTAcGSQ</inputSetRefs>
+            </outputSet>
+         </ioSpecification>
+         <dataInputAssociation id="_aD9WbD4XEeahK6ElTAcGSQ">
+            <targetRef>_232017C7-F3FE-455E-A21E-2CA712FABF52_TaskNameInputX</targetRef>
+            <assignment>
+               <from xsi:type="tFormalExpression">DictamenCrediticio</from>
+               <to xsi:type="tFormalExpression">_232017C7-F3FE-455E-A21E-2CA712FABF52_TaskNameInputX</to>
+            </assignment>
+         </dataInputAssociation>
+         <dataInputAssociation id="_aD9WcD4XEeahK6ElTAcGSQ">
+            <sourceRef>solicitudCaptura</sourceRef>
+            <targetRef>_232017C7-F3FE-455E-A21E-2CA712FABF52_inSolicitudCapturaInputX</targetRef>
+         </dataInputAssociation>
+         <dataInputAssociation id="_aD9WcT4XEeahK6ElTAcGSQ">
+            <sourceRef>resolucionDictamen</sourceRef>
+            <targetRef>_232017C7-F3FE-455E-A21E-2CA712FABF52_inResolucionDictamenInputX</targetRef>
+         </dataInputAssociation>
+         <dataInputAssociation id="_aD9Wcj4XEeahK6ElTAcGSQ">
+            <targetRef>_232017C7-F3FE-455E-A21E-2CA712FABF52_GroupIdInputX</targetRef>
+            <assignment>
+               <from xsi:type="tFormalExpression">analistaCredito</from>
+               <to xsi:type="tFormalExpression">_232017C7-F3FE-455E-A21E-2CA712FABF52_GroupIdInputX</to>
+            </assignment>
+         </dataInputAssociation>
+         <dataInputAssociation id="_aD9Wdj4XEeahK6ElTAcGSQ">
+            <targetRef>_232017C7-F3FE-455E-A21E-2CA712FABF52_SkippableInputX</targetRef>
+            <assignment>
+               <from xsi:type="tFormalExpression">true</from>
+               <to xsi:type="tFormalExpression">_232017C7-F3FE-455E-A21E-2CA712FABF52_SkippableInputX</to>
+            </assignment>
+         </dataInputAssociation>
+         <dataOutputAssociation id="_aD9Wej4XEeahK6ElTAcGSQ">
+            <sourceRef>_232017C7-F3FE-455E-A21E-2CA712FABF52_outSolicitudCapturaOutputX</sourceRef>
+            <targetRef>solicitudCaptura</targetRef>
+         </dataOutputAssociation>
+         <dataOutputAssociation id="_aD9Wez4XEeahK6ElTAcGSQ">
+            <sourceRef>_232017C7-F3FE-455E-A21E-2CA712FABF52_outResolucionDictamenOutputX</sourceRef>
+            <targetRef>resolucionDictamen</targetRef>
+         </dataOutputAssociation>
+      </userTask>
+      <exclusiveGateway color:background-color="#f0e68c" color:border-color="#a67f00" color:color="#000000" default="_5F82940B-597B-4D8E-8663-1E8095CCB78C" drools:dg="Si : _5F82940B-597B-4D8E-8663-1E8095CCB78C" drools:selectable="true" gatewayDirection="Diverging" id="_611D9324-CA25-4212-A797-C17BFA9FBD7B" name="Dictamen aprobado?">
+         <extensionElements>
+            <drools:metaData name="elementname">
+               <drools:metaValue>Dictamen aprobado?</drools:metaValue>
+        </drools:metaData>
+         </extensionElements>
+         <incoming>_03163F6D-FABD-42AF-9097-01131099F114</incoming>
+         <outgoing>_5F82940B-597B-4D8E-8663-1E8095CCB78C</outgoing>
+         <outgoing>_45655BAD-BEED-461F-8E3F-70003DBC4185</outgoing>
+      </exclusiveGateway>
+      <userTask color:background-color="#fafad2" color:border-color="#000000" color:color="#000000" completionQuantity="1" drools:scriptFormat="http://www.java.com/java" drools:selectable="true" id="_3953C50B-0EF2-4CC9-BD98-6AD2DC4E3265" implementation="##unspecified" isForCompensation="false" name="Alta de Credito" startQuantity="1">
+         <extensionElements>
+            <drools:metaData name="elementname">
+               <drools:metaValue>Alta de Credito</drools:metaValue>
+        </drools:metaData>
+         </extensionElements>
+         <incoming>_54E8BE13-3E98-4DE5-A998-AC6575F7D949</incoming>
+         <outgoing>_86A31CFA-10B6-46EC-9A52-AD84E1B165A4</outgoing>
+         <ioSpecification id="sid-5579b3b0-a1a4-4b20-a680-ee0cb32905bc">
+            <dataInput id="_3953C50B-0EF2-4CC9-BD98-6AD2DC4E3265_TaskNameInputX" isCollection="false" name="TaskName"/>
+            <dataInput id="_3953C50B-0EF2-4CC9-BD98-6AD2DC4E3265_inSolicitudCapturaInputX" isCollection="false" itemSubjectRef="__3953C50B-0EF2-4CC9-BD98-6AD2DC4E3265_inSolicitudCapturaInputXItem" name="inSolicitudCaptura"/>
+            <dataInput id="_3953C50B-0EF2-4CC9-BD98-6AD2DC4E3265_inResolucionDictamenInputX" isCollection="false" itemSubjectRef="__3953C50B-0EF2-4CC9-BD98-6AD2DC4E3265_inResolucionDictamenInputXItem" name="inResolucionDictamen"/>
+            <dataInput id="_3953C50B-0EF2-4CC9-BD98-6AD2DC4E3265_SkippableInputX" isCollection="false" itemSubjectRef="__3953C50B-0EF2-4CC9-BD98-6AD2DC4E3265_SkippableInputXItem" name="Skippable"/>
+            <dataInput id="_3953C50B-0EF2-4CC9-BD98-6AD2DC4E3265_GroupIdInputX" isCollection="false" itemSubjectRef="__3953C50B-0EF2-4CC9-BD98-6AD2DC4E3265_GroupIdInputXItem" name="GroupId"/>
+            <dataOutput id="_3953C50B-0EF2-4CC9-BD98-6AD2DC4E3265_outSolicitudCapturaOutputX" isCollection="false" itemSubjectRef="__3953C50B-0EF2-4CC9-BD98-6AD2DC4E3265_outSolicitudCapturaOutputXItem" name="outSolicitudCaptura"/>
+            <dataOutput id="_3953C50B-0EF2-4CC9-BD98-6AD2DC4E3265_outResolucionDictamenOutputX" isCollection="false" itemSubjectRef="__3953C50B-0EF2-4CC9-BD98-6AD2DC4E3265_outResolucionDictamenOutputXItem" name="outResolucionDictamen"/>
+            <inputSet id="_aD9WfT4XEeahK6ElTAcGSQ">
+               <dataInputRefs>_3953C50B-0EF2-4CC9-BD98-6AD2DC4E3265_inSolicitudCapturaInputX</dataInputRefs>
+               <dataInputRefs>_3953C50B-0EF2-4CC9-BD98-6AD2DC4E3265_inResolucionDictamenInputX</dataInputRefs>
+               <dataInputRefs>_3953C50B-0EF2-4CC9-BD98-6AD2DC4E3265_SkippableInputX</dataInputRefs>
+               <dataInputRefs>_3953C50B-0EF2-4CC9-BD98-6AD2DC4E3265_GroupIdInputX</dataInputRefs>
+               <dataInputRefs>_3953C50B-0EF2-4CC9-BD98-6AD2DC4E3265_TaskNameInputX</dataInputRefs>
+               <outputSetRefs>_aD9Wfj4XEeahK6ElTAcGSQ</outputSetRefs>
+            </inputSet>
+            <outputSet id="_aD9Wfj4XEeahK6ElTAcGSQ">
+               <dataOutputRefs>_3953C50B-0EF2-4CC9-BD98-6AD2DC4E3265_outSolicitudCapturaOutputX</dataOutputRefs>
+               <dataOutputRefs>_3953C50B-0EF2-4CC9-BD98-6AD2DC4E3265_outResolucionDictamenOutputX</dataOutputRefs>
+               <inputSetRefs>_aD9WfT4XEeahK6ElTAcGSQ</inputSetRefs>
+            </outputSet>
+         </ioSpecification>
+         <dataInputAssociation id="_aD9Wfz4XEeahK6ElTAcGSQ">
+            <targetRef>_3953C50B-0EF2-4CC9-BD98-6AD2DC4E3265_TaskNameInputX</targetRef>
+            <assignment>
+               <from xsi:type="tFormalExpression">AltadeCredito</from>
+               <to xsi:type="tFormalExpression">_3953C50B-0EF2-4CC9-BD98-6AD2DC4E3265_TaskNameInputX</to>
+            </assignment>
+         </dataInputAssociation>
+         <dataInputAssociation id="_aD9Wgz4XEeahK6ElTAcGSQ">
+            <sourceRef>solicitudCaptura</sourceRef>
+            <targetRef>_3953C50B-0EF2-4CC9-BD98-6AD2DC4E3265_inSolicitudCapturaInputX</targetRef>
+         </dataInputAssociation>
+         <dataInputAssociation id="_aD9WhD4XEeahK6ElTAcGSQ">
+            <sourceRef>resolucionDictamen</sourceRef>
+            <targetRef>_3953C50B-0EF2-4CC9-BD98-6AD2DC4E3265_inResolucionDictamenInputX</targetRef>
+         </dataInputAssociation>
+         <dataInputAssociation id="_aD9WhT4XEeahK6ElTAcGSQ">
+            <targetRef>_3953C50B-0EF2-4CC9-BD98-6AD2DC4E3265_GroupIdInputX</targetRef>
+            <assignment>
+               <from xsi:type="tFormalExpression">operaciones</from>
+               <to xsi:type="tFormalExpression">_3953C50B-0EF2-4CC9-BD98-6AD2DC4E3265_GroupIdInputX</to>
+            </assignment>
+         </dataInputAssociation>
+         <dataInputAssociation id="_aD9WiT4XEeahK6ElTAcGSQ">
+            <targetRef>_3953C50B-0EF2-4CC9-BD98-6AD2DC4E3265_SkippableInputX</targetRef>
+            <assignment>
+               <from xsi:type="tFormalExpression">true</from>
+               <to xsi:type="tFormalExpression">_3953C50B-0EF2-4CC9-BD98-6AD2DC4E3265_SkippableInputX</to>
+            </assignment>
+         </dataInputAssociation>
+         <dataOutputAssociation id="_aD9WjT4XEeahK6ElTAcGSQ">
+            <sourceRef>_3953C50B-0EF2-4CC9-BD98-6AD2DC4E3265_outSolicitudCapturaOutputX</sourceRef>
+            <targetRef>solicitudCaptura</targetRef>
+         </dataOutputAssociation>
+         <dataOutputAssociation id="_aD9Wjj4XEeahK6ElTAcGSQ">
+            <sourceRef>_3953C50B-0EF2-4CC9-BD98-6AD2DC4E3265_outResolucionDictamenOutputX</sourceRef>
+            <targetRef>resolucionDictamen</targetRef>
+         </dataOutputAssociation>
+      </userTask>
+      <scriptTask color:background-color="#fafad2" color:border-color="#000000" color:color="#000000" completionQuantity="1" drools:selectable="true" id="_D1295129-4F63-4BA8-82FF-4C0C4CE4712C" isForCompensation="false" name="Solicitar Disposicion" scriptFormat="http://www.java.com/java" startQuantity="1">
+         <extensionElements>
+            <drools:metaData name="elementname">
+               <drools:metaValue>Solicitar Disposicion</drools:metaValue>
+        </drools:metaData>
+            <drools:onExit-script scriptFormat="http://www.java.com/java">
+               <drools:script>correoDesde = "carlos.martin@alkimiaconsultores.com";
+correoAsunto = "Dictamen Aprobado";
+correoMensaje = "Estimado "+ solicitudCaptura.cliente.getNombre() + solicitudCaptura.cliente.getApPaterno() + solicitudCaptura.cliente.getapMaterno() +"su credito por el monto de "+resolucionDictamen.resolucion.getMonto() + "ha sido aprobado satisfactoriamente. Y el credito ha sido liberado a su cuenta personal";
+
+correoHacia = solicitudCaptura.cliente.getEmail();</drools:script>
+        </drools:onExit-script>
+         </extensionElements>
+         <incoming>_86A31CFA-10B6-46EC-9A52-AD84E1B165A4</incoming>
+         <outgoing>_E65DFC6B-392B-4E8A-A5E7-4F8BEE4949E0</outgoing>
+         <ioSpecification id="sid-5aa864a4-d01d-4af8-8eaf-31fe1c1f4c43">
+            <dataInput id="_D1295129-4F63-4BA8-82FF-4C0C4CE4712C_TaskNameInputX" isCollection="false" name="TaskName"/>
+            <dataInput id="_D1295129-4F63-4BA8-82FF-4C0C4CE4712C_SkippableInputX" isCollection="false" itemSubjectRef="__D1295129-4F63-4BA8-82FF-4C0C4CE4712C_SkippableInputXItem" name="Skippable"/>
+            <dataInput id="_D1295129-4F63-4BA8-82FF-4C0C4CE4712C_GroupIdInputX" isCollection="false" itemSubjectRef="__D1295129-4F63-4BA8-82FF-4C0C4CE4712C_GroupIdInputXItem" name="GroupId"/>
+            <inputSet id="_aD9WkD4XEeahK6ElTAcGSQ">
+               <dataInputRefs>_D1295129-4F63-4BA8-82FF-4C0C4CE4712C_SkippableInputX</dataInputRefs>
+               <dataInputRefs>_D1295129-4F63-4BA8-82FF-4C0C4CE4712C_GroupIdInputX</dataInputRefs>
+               <dataInputRefs>_D1295129-4F63-4BA8-82FF-4C0C4CE4712C_TaskNameInputX</dataInputRefs>
+               <outputSetRefs>sid-a6bdc1b8-8aa5-4802-ba22-3432e6257d74</outputSetRefs>
+            </inputSet>
+         </ioSpecification>
+         <dataInputAssociation id="_aD9Wkj4XEeahK6ElTAcGSQ">
+            <targetRef>_D1295129-4F63-4BA8-82FF-4C0C4CE4712C_TaskNameInputX</targetRef>
+            <assignment>
+               <from xsi:type="tFormalExpression">SolicitarDisposicion</from>
+               <to xsi:type="tFormalExpression">_D1295129-4F63-4BA8-82FF-4C0C4CE4712C_TaskNameInputX</to>
+            </assignment>
+         </dataInputAssociation>
+         <script>System.out.println("Se libera el credito al cliente");</script>
+      </scriptTask>
+      <endEvent color:background-color="#ff6347" color:border-color="#000000" color:color="#000000" drools:selectable="true" id="_17ACEBE2-A691-4C38-B1DA-CB28F598BDDB" name="">
+         <extensionElements>
+            <drools:metaData name="elementname">
+               <drools:metaValue/>
+        </drools:metaData>
+            <drools:metaData name="elementname">
+               <drools:metaValue/>
+        </drools:metaData>
+         </extensionElements>
+         <incoming>_2BCCD2D9-B7A2-4893-943F-293CFB2922E6</incoming>
+      </endEvent>
+      <scriptTask color:background-color="#fafad2" color:border-color="#000000" color:color="#000000" completionQuantity="1" drools:selectable="true" id="_D8ABCBAD-E310-4E2F-9FFF-A5110137454A" isForCompensation="false" name="Envio de email" scriptFormat="http://www.java.com/java" startQuantity="1">
+         <extensionElements>
+            <drools:metaData name="elementname">
+               <drools:metaValue>Envio de email</drools:metaValue>
+        </drools:metaData>
+         </extensionElements>
+         <incoming>_E65DFC6B-392B-4E8A-A5E7-4F8BEE4949E0</incoming>
+         <outgoing>_2BCCD2D9-B7A2-4893-943F-293CFB2922E6</outgoing>
+         <script>System.out.println("envio de email");</script>
+      </scriptTask>
+      <sequenceFlow color:background-color="#000000" color:border-color="#000000" color:color="#000000" drools:selectable="true" id="_143F4A20-C0B8-45BF-9F79-14A796AAE330" isImmediate="true" name="" sourceRef="_F89ACE36-66BC-49A9-A955-9F70A8A5DCE4" targetRef="_E521D1F1-D370-40D6-B996-3895F6B0A78C"/>
+      <sequenceFlow color:background-color="#000000" color:border-color="#000000" color:color="#000000" drools:selectable="true" id="_6E68AEA1-A8B3-45C6-BDB8-567CDDEC9B45" isImmediate="true" name="" sourceRef="_E521D1F1-D370-40D6-B996-3895F6B0A78C" targetRef="_F7944FF9-913C-41D5-8ED6-6F831F824FB8"/>
+      <sequenceFlow color:background-color="#000000" color:border-color="#000000" color:color="#000000" drools:selectable="true" id="_ED8F57B7-2844-46A7-9A67-87560750F6D3" isImmediate="true" name="No" sourceRef="_986E7B78-876B-42D0-9BCD-85A34D62BEC4" targetRef="_90D4A08A-AF75-4978-A582-71C5A45E13ED">
+         <extensionElements>
+            <drools:metaData name="elementname">
+               <drools:metaValue>No</drools:metaValue>
+        </drools:metaData>
+         </extensionElements>
+         <conditionExpression id="sid-334726af-243a-4630-b87b-3b135f7e14a1" xsi:type="tFormalExpression">return  KieFunctions.equalsTo(clienteAcepta, "No");</conditionExpression>
+      </sequenceFlow>
+      <sequenceFlow color:background-color="#000000" color:border-color="#000000" color:color="#000000" drools:selectable="true" id="_928F65A5-4F8B-4580-BCDA-D64C17CD7650" isImmediate="true" name="Si" sourceRef="_986E7B78-876B-42D0-9BCD-85A34D62BEC4" targetRef="_232017C7-F3FE-455E-A21E-2CA712FABF52">
+         <extensionElements>
+            <drools:metaData name="elementname">
+               <drools:metaValue>Si</drools:metaValue>
+        </drools:metaData>
+         </extensionElements>
+      </sequenceFlow>
+      <sequenceFlow color:background-color="#000000" color:border-color="#000000" color:color="#000000" drools:selectable="true" id="_65CA641A-BFBA-484A-94A9-DA0173382882" isImmediate="true" name="" sourceRef="_F7944FF9-913C-41D5-8ED6-6F831F824FB8" targetRef="_986E7B78-876B-42D0-9BCD-85A34D62BEC4"/>
+      <sequenceFlow color:background-color="#000000" color:border-color="#000000" color:color="#000000" drools:selectable="true" id="_03163F6D-FABD-42AF-9097-01131099F114" isImmediate="true" name="" sourceRef="_232017C7-F3FE-455E-A21E-2CA712FABF52" targetRef="_611D9324-CA25-4212-A797-C17BFA9FBD7B"/>
+      <sequenceFlow color:background-color="#000000" color:border-color="#000000" color:color="#000000" drools:selectable="true" id="_5F82940B-597B-4D8E-8663-1E8095CCB78C" isImmediate="true" name="Si" sourceRef="_611D9324-CA25-4212-A797-C17BFA9FBD7B" targetRef="_38C44B9F-0F9A-4CEE-8090-D865AC790921">
+         <extensionElements>
+            <drools:metaData name="elementname">
+               <drools:metaValue>Si</drools:metaValue>
+        </drools:metaData>
+         </extensionElements>
+      </sequenceFlow>
+      <sequenceFlow color:background-color="#000000" color:border-color="#000000" color:color="#000000" drools:selectable="true" id="_45655BAD-BEED-461F-8E3F-70003DBC4185" isImmediate="true" name="No" sourceRef="_611D9324-CA25-4212-A797-C17BFA9FBD7B" targetRef="_7E897125-4679-475E-923C-596A17AF09AA">
+         <extensionElements>
+            <drools:metaData name="elementname">
+               <drools:metaValue>No</drools:metaValue>
+        </drools:metaData>
+         </extensionElements>
+         <conditionExpression id="sid-3a292734-63a0-4a77-8966-5433fdff7150" xsi:type="tFormalExpression">return  KieFunctions.equalsTo(dictamenAprueba, "No");</conditionExpression>
+      </sequenceFlow>
+      <sequenceFlow color:background-color="#000000" color:border-color="#000000" color:color="#000000" drools:selectable="true" id="_5B224D96-FBB6-4E86-9144-C2F189D06AE0" isImmediate="true" name="" sourceRef="_7E897125-4679-475E-923C-596A17AF09AA" targetRef="_1F1DAF3C-7E04-4126-A058-667E992504A0"/>
+      <sequenceFlow color:background-color="#000000" color:border-color="#000000" color:color="#000000" drools:selectable="true" id="_E847DC65-7C29-499D-9C1E-0449BB55481E" isImmediate="true" name="Si" sourceRef="_1F1DAF3C-7E04-4126-A058-667E992504A0" targetRef="_7A936D33-9D8B-407A-BCF5-5622AC7F54DC">
+         <extensionElements>
+            <drools:metaData name="elementname">
+               <drools:metaValue>Si</drools:metaValue>
+        </drools:metaData>
+         </extensionElements>
+         <conditionExpression id="sid-2cc10bb0-0bc3-4148-87c3-34422ce78bd2" xsi:type="tFormalExpression">return  KieFunctions.equalsTo(reconsideracion, "Si");</conditionExpression>
+      </sequenceFlow>
+      <sequenceFlow color:background-color="#000000" color:border-color="#000000" color:color="#000000" drools:selectable="true" id="_74705F8E-A716-4394-8048-0AAB3639A965" isImmediate="true" name="No" sourceRef="_1F1DAF3C-7E04-4126-A058-667E992504A0" targetRef="_90D4A08A-AF75-4978-A582-71C5A45E13ED">
+         <extensionElements>
+            <drools:metaData name="elementname">
+               <drools:metaValue>No</drools:metaValue>
+        </drools:metaData>
+         </extensionElements>
+         <conditionExpression id="sid-b9326f11-f1ba-47df-ac5d-1cf24fcc9b51" xsi:type="tFormalExpression">return  KieFunctions.equalsTo(reconsideracion, "No");</conditionExpression>
+      </sequenceFlow>
+      <sequenceFlow color:background-color="#000000" color:border-color="#000000" color:color="#000000" drools:selectable="true" id="_54E8BE13-3E98-4DE5-A998-AC6575F7D949" isImmediate="true" name="" sourceRef="_38C44B9F-0F9A-4CEE-8090-D865AC790921" targetRef="_3953C50B-0EF2-4CC9-BD98-6AD2DC4E3265"/>
+      <sequenceFlow color:background-color="#000000" color:border-color="#000000" color:color="#000000" drools:selectable="true" id="_86A31CFA-10B6-46EC-9A52-AD84E1B165A4" isImmediate="true" name="" sourceRef="_3953C50B-0EF2-4CC9-BD98-6AD2DC4E3265" targetRef="_D1295129-4F63-4BA8-82FF-4C0C4CE4712C"/>
+      <sequenceFlow color:background-color="#000000" color:border-color="#000000" color:color="#000000" drools:selectable="true" id="_2FB81E47-91FB-444A-9223-C8A3DC349CB2" isImmediate="true" name="" sourceRef="processStartEvent" targetRef="_F89ACE36-66BC-49A9-A955-9F70A8A5DCE4"/>
+      <sequenceFlow color:background-color="#000000" color:border-color="#000000" color:color="#000000" drools:selectable="true" id="_C7DBA375-4AA1-4736-9F9A-454EA04E9109" isImmediate="true" name="" sourceRef="_7A936D33-9D8B-407A-BCF5-5622AC7F54DC" targetRef="_F89ACE36-66BC-49A9-A955-9F70A8A5DCE4"/>
+      <sequenceFlow color:background-color="#000000" color:border-color="#000000" color:color="#000000" drools:selectable="true" id="_E65DFC6B-392B-4E8A-A5E7-4F8BEE4949E0" isImmediate="true" name="" sourceRef="_D1295129-4F63-4BA8-82FF-4C0C4CE4712C" targetRef="_D8ABCBAD-E310-4E2F-9FFF-A5110137454A"/>
+      <sequenceFlow color:background-color="#000000" color:border-color="#000000" color:color="#000000" drools:selectable="true" id="_2BCCD2D9-B7A2-4893-943F-293CFB2922E6" isImmediate="true" name="" sourceRef="_D8ABCBAD-E310-4E2F-9FFF-A5110137454A" targetRef="_17ACEBE2-A691-4C38-B1DA-CB28F598BDDB"/>
+   </process>
+   <bpmndi:BPMNDiagram id="sid-a85edc35-2366-49a9-8b65-4403a066de44">
+      <bpmndi:BPMNPlane bpmnElement="sid-ad8c6f87-3467-4547-980b-930c125fefb2" id="sid-da17b3f5-b22a-4021-9f18-eb9da5e2f039">
+         <bpmndi:BPMNShape bpmnElement="originacionCredito.originacionCredito" id="originacionCredito.originacionCredito_gui" isHorizontal="true">
+            <omgdc:Bounds height="887.0" width="954.0" x="-30.0" y="0.0"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_E3993D55-EE09-48F9-8354-01BDEA56F981" id="_E3993D55-EE09-48F9-8354-01BDEA56F981_gui" isHorizontal="true">
+            <omgdc:Bounds height="244.0" width="924.0" x="0.0" y="0.0"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_8D2FEE8F-8880-4D8D-9FAC-869A82016C21" id="_8D2FEE8F-8880-4D8D-9FAC-869A82016C21_gui" isHorizontal="true">
+            <omgdc:Bounds height="146.0" width="920.0" x="0.0" y="240.0"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_7A8795B3-E6D7-4BD9-AA96-7F7EFD36F59C" id="_7A8795B3-E6D7-4BD9-AA96-7F7EFD36F59C_gui" isHorizontal="true">
+            <omgdc:Bounds height="149.0" width="917.0" x="0.0" y="381.0"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_96B81912-76D7-46FE-BD2E-74D9AA3AE995" id="_96B81912-76D7-46FE-BD2E-74D9AA3AE995_gui" isHorizontal="true">
+            <omgdc:Bounds height="182.0" width="914.0" x="0.0" y="533.0"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_24D838F3-3B0F-49C8-B04D-9C49F8B717BD" id="_24D838F3-3B0F-49C8-B04D-9C49F8B717BD_gui" isHorizontal="true">
+            <omgdc:Bounds height="176.0" width="912.0" x="0.0" y="711.0"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="processStartEvent" id="processStartEvent_gui">
+            <omgdc:Bounds height="30.0" width="30.0" x="74.0" y="47.0"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_F89ACE36-66BC-49A9-A955-9F70A8A5DCE4" id="_F89ACE36-66BC-49A9-A955-9F70A8A5DCE4_gui">
+            <omgdc:Bounds height="81.0" width="100.0" x="135.0" y="21.0"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_F7944FF9-913C-41D5-8ED6-6F831F824FB8" id="_F7944FF9-913C-41D5-8ED6-6F831F824FB8_gui">
+            <omgdc:Bounds height="81.0" width="100.0" x="255.0" y="105.0"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_38C44B9F-0F9A-4CEE-8090-D865AC790921" id="_38C44B9F-0F9A-4CEE-8090-D865AC790921_gui">
+            <omgdc:Bounds height="80.0" width="100.0" x="673.0" y="120.0"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_7E897125-4679-475E-923C-596A17AF09AA" id="_7E897125-4679-475E-923C-596A17AF09AA_gui">
+            <omgdc:Bounds height="87.0" width="108.0" x="795.0" y="15.0"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_1F1DAF3C-7E04-4126-A058-667E992504A0" id="_1F1DAF3C-7E04-4126-A058-667E992504A0_gui" isMarkerVisible="true">
+            <omgdc:Bounds height="40.0" width="40.0" x="629.0" y="42.0"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_7A936D33-9D8B-407A-BCF5-5622AC7F54DC" id="_7A936D33-9D8B-407A-BCF5-5622AC7F54DC_gui">
+            <omgdc:Bounds height="80.0" width="100.0" x="356.0" y="23.0"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_E521D1F1-D370-40D6-B996-3895F6B0A78C" id="_E521D1F1-D370-40D6-B996-3895F6B0A78C_gui">
+            <omgdc:Bounds height="80.0" width="100.0" x="135.0" y="255.0"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_986E7B78-876B-42D0-9BCD-85A34D62BEC4" id="_986E7B78-876B-42D0-9BCD-85A34D62BEC4_gui" isMarkerVisible="true">
+            <omgdc:Bounds height="40.0" width="40.0" x="351.0" y="286.0"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_90D4A08A-AF75-4978-A582-71C5A45E13ED" id="_90D4A08A-AF75-4978-A582-71C5A45E13ED_gui">
+            <omgdc:Bounds height="30.0" width="30.0" x="492.0" y="291.0"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_232017C7-F3FE-455E-A21E-2CA712FABF52" id="_232017C7-F3FE-455E-A21E-2CA712FABF52_gui">
+            <omgdc:Bounds height="80.0" width="100.0" x="420.0" y="420.0"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_611D9324-CA25-4212-A797-C17BFA9FBD7B" id="_611D9324-CA25-4212-A797-C17BFA9FBD7B_gui" isMarkerVisible="true">
+            <omgdc:Bounds height="40.0" width="40.0" x="703.0" y="441.0"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_3953C50B-0EF2-4CC9-BD98-6AD2DC4E3265" id="_3953C50B-0EF2-4CC9-BD98-6AD2DC4E3265_gui">
+            <omgdc:Bounds height="80.0" width="100.0" x="345.0" y="585.0"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_D1295129-4F63-4BA8-82FF-4C0C4CE4712C" id="_D1295129-4F63-4BA8-82FF-4C0C4CE4712C_gui">
+            <omgdc:Bounds height="80.0" width="100.0" x="524.0" y="584.0"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_17ACEBE2-A691-4C38-B1DA-CB28F598BDDB" id="_17ACEBE2-A691-4C38-B1DA-CB28F598BDDB_gui">
+            <omgdc:Bounds height="30.0" width="30.0" x="776.0" y="761.0"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="_D8ABCBAD-E310-4E2F-9FFF-A5110137454A" id="_D8ABCBAD-E310-4E2F-9FFF-A5110137454A_gui">
+            <omgdc:Bounds height="80.0" width="100.0" x="524.0" y="736.0"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNEdge bpmnElement="_143F4A20-C0B8-45BF-9F79-14A796AAE330" id="_143F4A20-C0B8-45BF-9F79-14A796AAE330_gui">
+            <omgdi:waypoint x="320.0" y="82.5"/>
+            <omgdi:waypoint x="320.0" y="310.0"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_6E68AEA1-A8B3-45C6-BDB8-567CDDEC9B45" id="_6E68AEA1-A8B3-45C6-BDB8-567CDDEC9B45_gui">
+            <omgdi:waypoint x="320.0" y="310.0"/>
+            <omgdi:waypoint x="560.0" y="250.5"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_ED8F57B7-2844-46A7-9A67-87560750F6D3" id="_ED8F57B7-2844-46A7-9A67-87560750F6D3_gui">
+            <omgdi:waypoint x="391.0" y="306.0"/>
+            <omgdi:waypoint x="492.0" y="306.0"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_928F65A5-4F8B-4580-BCDA-D64C17CD7650" id="_928F65A5-4F8B-4580-BCDA-D64C17CD7650_gui">
+            <omgdi:waypoint x="371.0" y="326.0"/>
+            <omgdi:waypoint x="371.0" y="460.0"/>
+            <omgdi:waypoint x="890.0" y="499.0"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_65CA641A-BFBA-484A-94A9-DA0173382882" id="_65CA641A-BFBA-484A-94A9-DA0173382882_gui">
+            <omgdi:waypoint x="560.0" y="250.5"/>
+            <omgdi:waypoint x="391.0" y="300.1269841269841"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_03163F6D-FABD-42AF-9097-01131099F114" id="_03163F6D-FABD-42AF-9097-01131099F114_gui">
+            <omgdi:waypoint x="890.0" y="499.0"/>
+            <omgdi:waypoint x="743.0" y="465.5508982035928"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_5F82940B-597B-4D8E-8663-1E8095CCB78C" id="_5F82940B-597B-4D8E-8663-1E8095CCB78C_gui">
+            <omgdi:waypoint x="743.0" y="455.6210995542348"/>
+            <omgdi:waypoint x="1396.0" y="280.0"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_45655BAD-BEED-461F-8E3F-70003DBC4185" id="_45655BAD-BEED-461F-8E3F-70003DBC4185_gui">
+            <omgdi:waypoint x="743.0" y="461.0"/>
+            <omgdi:waypoint x="849.0" y="461.0"/>
+            <omgdi:waypoint x="1644.0" y="73.5"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_5B224D96-FBB6-4E86-9144-C2F189D06AE0" id="_5B224D96-FBB6-4E86-9144-C2F189D06AE0_gui">
+            <omgdi:waypoint x="1644.0" y="73.5"/>
+            <omgdi:waypoint x="669.0" y="62.231155778894475"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_E847DC65-7C29-499D-9C1E-0449BB55481E" id="_E847DC65-7C29-499D-9C1E-0449BB55481E_gui">
+            <omgdi:waypoint x="669.0" y="66.24778761061947"/>
+            <omgdi:waypoint x="762.0" y="86.0"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_74705F8E-A716-4394-8048-0AAB3639A965" id="_74705F8E-A716-4394-8048-0AAB3639A965_gui">
+            <omgdi:waypoint x="649.0" y="82.0"/>
+            <omgdi:waypoint x="649.0" y="306.0"/>
+            <omgdi:waypoint x="522.0" y="306.0"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_54E8BE13-3E98-4DE5-A998-AC6575F7D949" id="_54E8BE13-3E98-4DE5-A998-AC6575F7D949_gui">
+            <omgdi:waypoint x="1396.0" y="280.0"/>
+            <omgdi:waypoint x="395.0" y="160.0"/>
+            <omgdi:waypoint x="740.0" y="677.0"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_86A31CFA-10B6-46EC-9A52-AD84E1B165A4" id="_86A31CFA-10B6-46EC-9A52-AD84E1B165A4_gui">
+            <omgdi:waypoint x="740.0" y="677.0"/>
+            <omgdi:waypoint x="1098.0" y="675.0"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_2FB81E47-91FB-444A-9223-C8A3DC349CB2" id="_2FB81E47-91FB-444A-9223-C8A3DC349CB2_gui">
+            <omgdi:waypoint x="104.0" y="63.33116883116883"/>
+            <omgdi:waypoint x="320.0" y="82.5"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_C7DBA375-4AA1-4736-9F9A-454EA04E9109" id="_C7DBA375-4AA1-4736-9F9A-454EA04E9109_gui">
+            <omgdi:waypoint x="762.0" y="86.0"/>
+            <omgdi:waypoint x="320.0" y="82.5"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_E65DFC6B-392B-4E8A-A5E7-4F8BEE4949E0" id="_E65DFC6B-392B-4E8A-A5E7-4F8BEE4949E0_gui">
+            <omgdi:waypoint x="1098.0" y="675.0"/>
+            <omgdi:waypoint x="1098.0" y="801.0"/>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_2BCCD2D9-B7A2-4893-943F-293CFB2922E6" id="_2BCCD2D9-B7A2-4893-943F-293CFB2922E6_gui">
+            <omgdi:waypoint x="1098.0" y="801.0"/>
+            <omgdi:waypoint x="806.0" y="777.2214983713355"/>
+         </bpmndi:BPMNEdge>
+      </bpmndi:BPMNPlane>
+   </bpmndi:BPMNDiagram>
+</definitions>
